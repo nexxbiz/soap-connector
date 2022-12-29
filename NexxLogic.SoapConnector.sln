@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FCA354E7-9B2D-4A8F-82F7-624471868B30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{830BDD01-6D16-495C-8EE9-3A9F6D69FCFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexxLogic.SoapConnector", "src\NexxLogic.SoapConnector\NexxLogic.SoapConnector.csproj", "{EF5C7AD2-AEFE-4BCF-B674-86E856FB75D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexxLogic.Elsa.V2.Activities.SoapConnector", "src\NexxLogic.Elsa.V2.Activities.SoapConnector\NexxLogic.Elsa.V2.Activities.SoapConnector.csproj", "{D1D64B1B-55CE-4E9F-9ED8-2C888505ED91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexxLogic.SoapServiceInterpreter", "src\NexxLogic.SoapServiceInterpreter\NexxLogic.SoapServiceInterpreter.csproj", "{86097D8A-5764-4902-B2CE-A5FD9309F7BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexxLogic.SoapConnector.Tests", "tests\NexxLogic.SoapConnector.Tests\NexxLogic.SoapConnector.Tests.csproj", "{D6625AD3-6FCE-4732-B138-C055E18D6AF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF5C7AD2-AEFE-4BCF-B674-86E856FB75D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF5C7AD2-AEFE-4BCF-B674-86E856FB75D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF5C7AD2-AEFE-4BCF-B674-86E856FB75D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF5C7AD2-AEFE-4BCF-B674-86E856FB75D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1D64B1B-55CE-4E9F-9ED8-2C888505ED91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1D64B1B-55CE-4E9F-9ED8-2C888505ED91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1D64B1B-55CE-4E9F-9ED8-2C888505ED91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1D64B1B-55CE-4E9F-9ED8-2C888505ED91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86097D8A-5764-4902-B2CE-A5FD9309F7BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86097D8A-5764-4902-B2CE-A5FD9309F7BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86097D8A-5764-4902-B2CE-A5FD9309F7BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86097D8A-5764-4902-B2CE-A5FD9309F7BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6625AD3-6FCE-4732-B138-C055E18D6AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6625AD3-6FCE-4732-B138-C055E18D6AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6625AD3-6FCE-4732-B138-C055E18D6AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6625AD3-6FCE-4732-B138-C055E18D6AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EF5C7AD2-AEFE-4BCF-B674-86E856FB75D6} = {FCA354E7-9B2D-4A8F-82F7-624471868B30}
+		{D1D64B1B-55CE-4E9F-9ED8-2C888505ED91} = {FCA354E7-9B2D-4A8F-82F7-624471868B30}
+		{86097D8A-5764-4902-B2CE-A5FD9309F7BF} = {FCA354E7-9B2D-4A8F-82F7-624471868B30}
+		{D6625AD3-6FCE-4732-B138-C055E18D6AF5} = {830BDD01-6D16-495C-8EE9-3A9F6D69FCFA}
+	EndGlobalSection
+EndGlobal
