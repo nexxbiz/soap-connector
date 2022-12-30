@@ -15,7 +15,8 @@ public static class ServiceCollectionExtensions
     }
 
     private static ElsaOptionsBuilder AddSoapConnectorActivity(this ElsaOptionsBuilder services) =>
-        services.AddActivity<SendSoapRequest>();
+        services.AddActivity<SendSoapRequest>()
+            .AddActivity<SoapHandler>();
     
     private static IServiceCollection AddSoapConnectorServices(this IServiceCollection services)
     {

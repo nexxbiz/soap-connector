@@ -2,7 +2,7 @@ using System.Net;
 
 namespace NexxLogic.Elsa.V2.Activities.SoapConnector.Models;
 
-public class HttpResponseModel
+public class SoapResponseModel
 {
     public HttpStatusCode StatusCode { get; set; }
 

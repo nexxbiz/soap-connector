@@ -98,7 +98,7 @@ public class SendSoapRequest : Activity
     public string? ResponseContent { get; set; }
 
     [ActivityOutput] 
-    public HttpResponseModel? Response { get; set; }
+    public SoapResponseModel? Response { get; set; }
 
     protected override async ValueTask<IActivityExecutionResult> OnExecuteAsync(ActivityExecutionContext context)
     {
@@ -116,18 +116,24 @@ public class SendSoapRequest : Activity
             headerElement = headerElement.WithTargetNamespace(SoapHeaderTargetNamespace);
         }
 
+        context.JournalData.Add(nameof(SoapBody), bodyElement);
+        context.JournalData.Add(nameof(SoapHeader), headerElement);
+        
         result = await soapClient.SendAsync(BaseUrl, SoapVersion, bodyElement, headerElement, Action,
             context.CancellationToken);
 
 
         ResponseContent = (await result.Content.ReadAsStringAsync()).Trim();
 
-        Response = new HttpResponseModel
+        Response = new SoapResponseModel
         {
             Headers = result.Headers.ToDictionary(x => x.Key, v => v.Value.ToArray()),
             StatusCode = result.StatusCode
         };
 
+        context.JournalData.Add(nameof(ResponseContent), ResponseContent);
+        context.JournalData.Add(nameof(Response), Response);
+        
         return Done();
     }
 
