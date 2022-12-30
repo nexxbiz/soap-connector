@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="NJsonSchema" Version="10.8.0" />
+        <PackageReference Include="NJsonSchema.Extensions" Version="0.1.0" />
+        <PackageReference Include="System.Web.Services.Description" Version="4.10.0" />
+    </ItemGroup>
+
+</Project>
