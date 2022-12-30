@@ -13,4 +13,9 @@
         <PackageReference Include="Elsa" Version="2.9.2" />
     </ItemGroup>
 
+
+    <ItemGroup>
+      <ProjectReference Include="..\NexxLogic.SoapConnector\NexxLogic.SoapConnector.csproj" />
+    </ItemGroup>
+
 </Project>

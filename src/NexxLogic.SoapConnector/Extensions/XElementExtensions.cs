@@ -4,7 +4,7 @@ namespace NexxLogic.SoapConnector.Extensions;
 
 public static class XElementExtensions
 {
-    public static XElement GetWithTargetNamespace(this XElement element, string targetNamespace)
+    public static XElement WithTargetNamespace(this XElement element, string targetNamespace)
     {
         XNamespace ns = targetNamespace;
         element.Name = ns + element.Name.LocalName;
