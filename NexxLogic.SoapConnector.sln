@@ -12,8 +12,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexxLogic.SoapConnector.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexxLogic.SoapServiceInterpreter.Tests", "tests\NexxLogic.SoapServiceInterpreter.Tests\NexxLogic.SoapServiceInterpreter.Tests.csproj", "{8AFF6E70-D423-4EA5-A4C4-DF93FEF5AFBA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{B3A46778-C3EE-4A2E-B8D3-941811F10BE7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
