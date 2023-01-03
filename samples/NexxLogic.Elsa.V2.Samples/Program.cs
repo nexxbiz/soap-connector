@@ -11,7 +11,8 @@ builder.Services.AddElsa(options =>
         .AddConsoleActivities()
         .AddJavaScriptActivities()
         .AddHttpActivities(elsaSection.GetSection("Server").Bind)
-        .AddSoapConnector();
+        .AddSoapConnector()
+        .AddSoapActivitiesProvider(builder.Configuration.GetSection("SoapActivitySettings").Bind);
 
     options.UseEntityFrameworkPersistence(ef =>
     {

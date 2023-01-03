@@ -16,6 +16,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\NexxLogic.SoapConnector\NexxLogic.SoapConnector.csproj" />
+      <ProjectReference Include="..\NexxLogic.SoapServiceInterpreter\NexxLogic.SoapServiceInterpreter.csproj" />
     </ItemGroup>
 
 </Project>

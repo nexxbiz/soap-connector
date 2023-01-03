@@ -14,7 +14,7 @@ using NexxLogic.SoapConnector.Enums;
 
 namespace NexxLogic.Elsa.V2.Activities.SoapConnector.Activities;
 
-[Activity(
+[Action(
     Category = "Soap",
     DisplayName = "Soap Handler",
     Description = "Transforms and executes soap services",
