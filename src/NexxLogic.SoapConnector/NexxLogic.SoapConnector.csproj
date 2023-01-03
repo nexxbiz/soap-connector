@@ -2,15 +2,20 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
+        <Authors>nexxbiz</Authors>
+        <Copyright>Copyright © 2023</Copyright>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Description>Soap Http Client - a client that allowes to send soap messages (Header and Body) through HttpClient</Description>
+        <IsPackable>true</IsPackable>
+        <PackageProjectUrl>https://github.com/nexxbiz/soap-connector</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/nexxbiz/soap-connector</RepositoryUrl>
+        <PackageTags>SOAP CLIENT;DOTNET</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="System.Web.Services.Description" Version="4.10.0" />
       <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
     </ItemGroup>
 
-
-
+    
 </Project>
