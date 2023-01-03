@@ -18,16 +18,16 @@ public class SoapInterpreter : ISoapInterpreter
         return GetSoapService(serviceDescription);
     }
 
-    private List<string> GetEnvelopeVersions(ServiceDescription serviceDescription)
+    private List<EnvelopeVersion> GetEnvelopeVersions(ServiceDescription serviceDescription)
     {
-        var result = new List<string>();
+        var result = new List<EnvelopeVersion>();
         if(serviceDescription.Namespaces.ToArray().Any(n=> n.Namespace == "http://schemas.xmlsoap.org/wsdl/soap/"))
         {
-            result.Add("Soap_11");
+            result.Add(EnvelopeVersion.SOAP_11);
         }
         if(serviceDescription.Namespaces.ToArray().Any(n=> n.Namespace == "http://schemas.xmlsoap.org/wsdl/soap12/"))
         {
-            result.Add("Soap_12");
+            result.Add(EnvelopeVersion.SOAP_11);
         }
 
         return result;
@@ -38,32 +38,39 @@ public class SoapInterpreter : ISoapInterpreter
         var soapService = new SoapService();
         
         soapService.EnvelopeVersions.AddRange(GetEnvelopeVersions(serviceDescription));
-        
+
+        soapService.EndpointAddress = GetEndpoint(serviceDescription);;
         foreach (PortType portType in serviceDescription.PortTypes)
         {
-            var methods = new List<ServiceMethod>();
+            var methods = new List<ServiceOperation>();
             soapService.ServiceName = portType.Name;
             soapService.TargetNamespace = serviceDescription.TargetNamespace;
 
             foreach (Operation operation in portType.Operations)
             {
-                methods.Add(GetServiceMethod(operation, serviceDescription.TargetNamespace));
+                methods.Add(GetServiceMethod(operation));
             }
 
-            soapService.Methods = methods;
+            soapService.Operations = methods;
         }
         return soapService;
     }
 
-    private ServiceMethod GetServiceMethod(Operation operation, string targetNamespace)
+    private static string GetEndpoint(ServiceDescription serviceDescription)
     {
-        var method = new ServiceMethod
+        return ((SoapAddressBinding) serviceDescription.Services[0].Ports[0].Extensions
+            .Find(typeof(SoapAddressBinding))).Location;
+    }
+
+    private ServiceOperation GetServiceMethod(Operation operation)
+    {
+        var method = new ServiceOperation
         {
             Name = operation.Name,
             Description = operation.Documentation,
             InputParameters = new Dictionary<string, object>(),
             OutputParameters = new Dictionary<string, object>(),
-            Action = $"{targetNamespace}/{operation.Name}"
+            Action = operation.Name
         };
         return method;
     }

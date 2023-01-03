@@ -11,6 +11,6 @@ public class Tests
     public void Test1()
     {
         var sut = new SoapInterpreter();
-        var soapService = sut.Read("");
+        var soapService = sut.Read("http://www.dneonline.com/calculator.asmx?WSDL");
     }
 }

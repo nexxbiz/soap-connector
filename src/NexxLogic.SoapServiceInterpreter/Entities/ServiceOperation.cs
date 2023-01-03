@@ -1,6 +1,6 @@
 namespace NexxLogic.SoapServiceInterpreter.Entities;
 
-public class ServiceMethod
+public class ServiceOperation
 {
     public string Name { get; set; } = default!;
     public string Description { get; set; } = default!;
